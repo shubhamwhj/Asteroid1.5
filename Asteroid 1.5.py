@@ -26,7 +26,10 @@ while True:
  
   enemy.x=enemy.x + xvel
  
-  if enemy.x < -250 or enemy.x > 650 :
+  if enemy.x < -250:
+    xvel = -1*xvel  
+  
+  if enemy.x > 650 :
     xvel = -1*xvel
   
   pygame.draw.rect(screen,BLUE,player)
